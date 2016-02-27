@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.feature "user can log in" do
   scenario "user can log in from root page" do
-    user = User.create(username: "Admir", password: "blah")
+    user = User.create(username: "Admir", password: "blah", role: 0)
     visit '/'
     click_on "Login"
     expect(page).to have_current_path(login_path)

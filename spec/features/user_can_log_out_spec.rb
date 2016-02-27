@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.feature "user can log out" do
   scenario "logged in user can log out" do
-    user = User.create(username: "Admir", password: "blah")
+    user = User.create(username: "Molly", password: "blah")
     visit login_path
     fill_in "Username", with: "Admir"
     fill_in "Password", with: "blah"
