@@ -11,8 +11,9 @@ RSpec.feature "user can register" do
     fill_in "Username", with: "chelsea"
     fill_in "Password", with: "password"
     click_on "Submit"
-    # puts User.last.username
-    ApplicationController.any_instance.stubs(:current_user).returns(user)
+    user = User.last
+
+
     # puts subject.current_user.username
     # returns Admir when only chelsea is in db. Admir from another stub. Test order?
     # save_and_open_page
