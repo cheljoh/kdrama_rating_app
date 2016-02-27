@@ -20,10 +20,16 @@ RSpec.feature "admin can create categories" do
 
    fill_in "Name", with: "Action"
    click_on "Update Category"
-   expect(page). to have_content("Action")
+   expect(page).to have_content("Action")
   end
   #
-  # scenario "admin can delete a category" do
-  #
-  # end
+  scenario "admin can delete a category" do
+    admin = User.create(username: "Waldo", password: "password", role: 1)
+    category = Category.create(name: "Romance")
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)
+    visit admin_category_path(category)
+    click_on "Delete"
+    expect(page).to_not have_content("Romance")
+    expect(page).to have_current_path(admin_categories_path)
+  end
 end
