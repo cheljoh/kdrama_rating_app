@@ -1,0 +1,8 @@
+<h1><%=@title.name%></h1>
+
+<div id="picture">
+  <%= image_tag @title.image_path %>
+</div>
+
+<%= link_to "Edit Title", edit_admin_title_path %>
+<%= link_to "Delete Title", admin_title_path(@title), method: "delete" %>

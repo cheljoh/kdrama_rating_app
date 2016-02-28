@@ -1,0 +1,7 @@
+<%= form_for([:admin, @title]) do |f|%>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :image_path, "Image Path" %>
+  <%= f.text_field :image_path %>
+  <%= f.submit %>
+<% end %>

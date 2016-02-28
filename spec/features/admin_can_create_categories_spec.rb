@@ -22,7 +22,7 @@ RSpec.feature "admin can create categories" do
    click_on "Update Category"
    expect(page).to have_content("Action")
   end
-  #
+  
   scenario "admin can delete a category" do
     admin = User.create(username: "Waldo", password: "password", role: 1)
     category = Category.create(name: "Romance")
