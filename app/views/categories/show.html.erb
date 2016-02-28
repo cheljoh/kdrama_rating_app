@@ -1,0 +1,6 @@
+<h1>Titles for <%= @category.name %></h1>
+
+<% @category.titles.each do |title| %>
+  <%= title.name %><br />
+  <%= image_tag title.image_path %><br />
+<% end %>

@@ -1,0 +1,7 @@
+<h3>Add a rating between 1 and 5</h3>
+
+<%= form_for([@title, @rating]) do |f|%>
+  <%= f.label :score %>
+  <%= f.text_field :score %>
+  <%= f.submit %>
+<% end %>

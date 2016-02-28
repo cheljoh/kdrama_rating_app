@@ -18,6 +18,16 @@ class SessionsController < ApplicationController
       # flash[:error] = "Incorrect username and/or password"
       render :new
     end
+    # if @user && @user.authenticate(params[:session][:password]) #user exists in db and pw is ok
+    #   session[:user_id] = @user.id #could have this in model, but in string for the path. Would call user.dashboard path
+    #   if @user.admin?
+    #     redirect to admin_path
+    #   else
+    #     redirect_to user_path(@user)
+    #   end
+    # else
+    #   render :new
+    # end
   end
 
 end

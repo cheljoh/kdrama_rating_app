@@ -11,13 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160227235212) do
+ActiveRecord::Schema.define(version: 20160228201230) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "rating_titles", force: :cascade do |t|
+    t.integer  "rating_id"
+    t.integer  "title_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "rating_titles", ["rating_id"], name: "index_rating_titles_on_rating_id", using: :btree
+  add_index "rating_titles", ["title_id"], name: "index_rating_titles_on_title_id", using: :btree
+
+  create_table "ratings", force: :cascade do |t|
+    t.integer  "score"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -40,5 +56,7 @@ ActiveRecord::Schema.define(version: 20160227235212) do
     t.integer  "role",            default: 0
   end
 
+  add_foreign_key "rating_titles", "ratings"
+  add_foreign_key "rating_titles", "titles"
   add_foreign_key "titles", "categories"
 end

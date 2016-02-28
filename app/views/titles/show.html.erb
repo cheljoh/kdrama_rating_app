@@ -3,3 +3,6 @@
 <div id="picture">
   <%= image_tag @title.image_path %>
 </div>
+
+<%= link_to "Rate this Title!", new_title_rating_path(@title) %><br />
+<%= "Average score: #{@average}" %>
