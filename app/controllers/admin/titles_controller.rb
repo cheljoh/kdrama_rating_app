@@ -43,7 +43,7 @@ class Admin::TitlesController < Admin::BaseController
 private
 
   def title_params
-    params.require(:title).permit(:name, :image_path)
+    params.require(:title).permit(:name, :image_path, :category_id)
   end
 
 end

@@ -3,5 +3,6 @@
   <%= f.text_field :name %>
   <%= f.label :image_path, "Image Path" %>
   <%= f.text_field :image_path %>
+  <%= select("title", :category_id, Category.all.collect { |c| [c.name, c.id]}, { prompt:"select category"}) %>
   <%= f.submit %>
 <% end %>

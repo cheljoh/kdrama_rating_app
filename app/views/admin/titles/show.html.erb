@@ -3,6 +3,6 @@
 <div id="picture">
   <%= image_tag @title.image_path %>
 </div>
-
+Category:<%=@title.category.name %>
 <%= link_to "Edit Title", edit_admin_title_path %>
 <%= link_to "Delete Title", admin_title_path(@title), method: "delete" %>
