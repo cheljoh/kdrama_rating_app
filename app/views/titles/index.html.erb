@@ -1,6 +1,12 @@
-<h1>All Titles</h1>
-<% @titles.each do |title| %>
-  <ul>
-    <li><%= link_to title.name, title_path(title.id) %></li>
-  </ul>
-<% end %>
+<div class="container">
+  <div class="jumbotron text-center">
+    <h1>All Titles</h1>
+  </div>
+  <div id="content">
+    <% @titles.each do |title| %>
+      <ul>
+        <li><%= link_to title.name, title_path(title.id) %></li>
+      </ul>
+    <% end %>
+  </div>
+</div>

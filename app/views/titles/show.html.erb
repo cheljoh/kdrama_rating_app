@@ -1,8 +1,11 @@
-<h1><%=@title.name%></h1>
+<div class="container">
+  <div id="content">
+  <h1><%=@title.name%></h1>
 
-<div id="picture">
-  <%= image_tag @title.image_path %>
+    <%= image_tag @title.image_path %> <br />
+
+  <%= link_to "Rate this Title!", new_title_rating_path(@title) %><br />
+  <%= "Average score: #{@average}" %> <br />
+  <%= link_to "Back to All Titles", titles_path %>
+  </div>
 </div>
-
-<%= link_to "Rate this Title!", new_title_rating_path(@title) %><br />
-<%= "Average score: #{@average}" %>

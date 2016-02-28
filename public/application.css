@@ -2,10 +2,11 @@ body {
   padding-top: 70px;
   background-image: url("https://polygrafi.files.wordpress.com/2013/04/drama.jpg");
   background-size: cover;
+  font-size: 20px;
 }
 
-.dashboard-links {
-  background-color: #FFFFFF
+#content {
+  background-color: #FFFFFF;
 }
 
 .navbar {
