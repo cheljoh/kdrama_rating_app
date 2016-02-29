@@ -8,7 +8,12 @@ class RatingsController < ApplicationController
   def create
     @title = Title.find(params[:title_id])
     @rating = @title.ratings.create(rating_params)
-    redirect_to "/titles/#{@title.id}/ratings/#{@rating.id}"
+    if @rating.save
+      redirect_to "/titles/#{@title.id}/ratings/#{@rating.id}"
+    else
+      flash[:error] = "Please rate on a 1-5 scale"
+      render :new
+    end
   end
 
   def show
