@@ -4,9 +4,7 @@
   </div>
   <div id="content">
     <% @titles.each do |title| %>
-      <ul>
-        <li><%= link_to title.name, title_path(title.id) %></li>
-      </ul>
+        <%= image_tag "http://www.englishtearoom.com/wp-content/uploads/2015/06/heart-icon.png" %><%= link_to title.name, title_path(title.id) %><br />
     <% end %>
   </div>
 </div>
