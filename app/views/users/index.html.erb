@@ -5,14 +5,14 @@
 
   <nav class="navbar navbar-default">
     <ul class="nav navbar-nav">
+      <li><%= link_to "View All Kdramas", titles_path %></li>
+      <li><%= link_to "View Kdramas by Category", categories_path %></li>
+  </ul>
+  <ul class="nav navbar-nav navbar-right">
     <li><%= link_to "Register", new_user_path %>  </li>
     <li><%= link_to "Login", login_path %>  </li>
     <li>  <%= link_to "Logout", logout_path, method: "delete" %></li>
-    </ul>
+  </ul>
   </nav>
   <br />
-  <div id="content">
-    <%= link_to "View All Kdramas", titles_path %> <br /> <br />
-    <%= link_to "View Kdramas by Category", categories_path %>
-  </div>
 </div>
