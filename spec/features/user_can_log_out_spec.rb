@@ -10,7 +10,6 @@ RSpec.feature "user can log out" do
 
     visit '/'
     click_on 'Logout'
-    save_and_open_page
     expect(page).to_not have_content("Welcome #{user.username}")
   end
 end
