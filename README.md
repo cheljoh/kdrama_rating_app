@@ -9,11 +9,11 @@ Requires Rails and Ruby. After cloning, run "bundle"
 
 View Kdramas by category or view all Kdramas. Rate each Kdrama on a scale of 1-5. Have fun!
 
-### Write history
+### History
 Inspired by a love for all things Kdrama
 
 ### Credits
 
-Admir Draganovic
+[Admir Draganovic](https://github.com/Draganovic)
 
-Chelsea Johnson
+[Chelsea Johnson](https://github.com/cheljoh)
